@@ -1,0 +1,171 @@
+# ==============================
+# C++ Build Artifacts
+# ==============================
+
+# Executables / libraries
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Object files
+*.o
+*.obj
+*.lo
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Dependency files
+*.d
+*.dep
+
+# ==============================
+# Build Directories
+# ==============================
+
+build/
+build-*/
+cmake-build-*/
+out/
+bin/
+obj/
+
+# ==============================
+# CMake
+# ==============================
+
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+Makefile
+
+# CMake generated files
+*.cmake.user
+
+# ==============================
+# Visual Studio
+# ==============================
+
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio build output
+Debug/
+Release/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio Code
+.vscode/
+
+# ==============================
+# CLion / JetBrains
+# ==============================
+
+.idea/
+*.iml
+
+# ==============================
+# Xcode
+# ==============================
+
+DerivedData/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+
+# ==============================
+# Compiled / Generated Files
+# ==============================
+
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+*.swo
+*~
+
+# ==============================
+# Coverage / Profiling
+# ==============================
+
+*.gcda
+*.gcno
+*.gcov
+coverage/
+.coverage
+.profraw
+.profdata
+
+# ==============================
+# Testing
+# ==============================
+
+Testing/
+CTestTestfile.cmake
+test-results/
+
+# ==============================
+# Package Managers
+# ==============================
+
+# Conan
+.conan/
+conanbuild.*
+conaninfo.txt
+conan.lock
+
+# vcpkg
+vcpkg_installed/
+
+# ==============================
+# Documentation / Generated Docs
+# ==============================
+
+docs/_build/
+
+# ==============================
+# OS Files
+# ==============================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ==============================
+# Environment / Secrets
+# ==============================
+
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Local Configuration
+# ==============================
+
+*.local
+*.user
+local/
