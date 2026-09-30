@@ -137,5 +137,74 @@ namespace exchange::matching
             OrderCancelled order_cancelled;
             Trade trade;
         } payload{};
+
+        static Event make(const OrderAccepted &value) noexcept
+        {
+            Event event{};
+            event.type = EventType::ORDER_ACCEPTED;
+            event.payload.order_accepted = value;
+            return event;
+        }
+        static Event make(const OrderRested &value) noexcept
+        {
+            Event event{};
+            event.type = EventType::ORDER_RESTED;
+            event.payload.order_rested = value;
+            return event;
+        }
+        static Event make(const OrderRejected &value) noexcept
+        {
+            Event event{};
+            event.type = EventType::ORDER_REJECTED;
+            event.payload.order_rejected = value;
+            return event;
+        }
+        static Event make(const OrderReduced &value) noexcept
+        {
+            Event event{};
+            event.type = EventType::ORDER_REDUCED;
+            event.payload.order_reduced = value;
+            return event;
+        }
+        static Event make(const OrderPartiallyFilled &value) noexcept
+        {
+            Event event{};
+            event.type = EventType::ORDER_PARTIALLY_FILLED;
+            event.payload.order_partially_filled = value;
+            return event;
+        }
+        static Event make(const OrderFilled &value) noexcept
+        {
+            Event event{};
+            event.type = EventType::ORDER_FILLED;
+            event.payload.order_filled = value;
+            return event;
+        }
+        static Event make(const OrderCancelled &value) noexcept
+        {
+            Event event{};
+            event.type = EventType::ORDER_CANCELLED;
+            event.payload.order_cancelled = value;
+            return event;
+        }
+        static Event make(const Trade &value) noexcept
+        {
+            Event event{};
+            event.type = EventType::TRADE;
+            event.payload.trade = value;
+            return event;
+        }
     };
+
+    static_assert(std::is_trivially_copyable_v<ReasonCode>);
+    static_assert(std::is_trivially_copyable_v<EventType>);
+    static_assert(std::is_trivially_copyable_v<OrderAccepted>);
+    static_assert(std::is_trivially_copyable_v<OrderRested>);
+    static_assert(std::is_trivially_copyable_v<OrderRejected>);
+    static_assert(std::is_trivially_copyable_v<OrderReduced>);
+    static_assert(std::is_trivially_copyable_v<OrderPartiallyFilled>);
+    static_assert(std::is_trivially_copyable_v<OrderFilled>);
+    static_assert(std::is_trivially_copyable_v<OrderCancelled>);
+    static_assert(std::is_trivially_copyable_v<Trade>);
+    static_assert(std::is_trivially_copyable_v<Event>);
 }
